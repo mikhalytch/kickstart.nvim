@@ -119,7 +119,7 @@ vim.schedule(function()
 end)
 
 -- Enable break indent
-vim.opt.breakindent = true
+vim.opt.breakindent = false
 
 -- Save undo history
 vim.opt.undofile = true
