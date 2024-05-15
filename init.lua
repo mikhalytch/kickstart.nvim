@@ -906,6 +906,9 @@ require('lazy').setup({
     end,
   },
 
+  -- rainbow brackets
+  { 'hiphish/rainbow-delimiters.nvim' },
+
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
