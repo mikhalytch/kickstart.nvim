@@ -931,10 +931,14 @@ require('lazy').setup({
     --[[   { 'Mofiqul/dracula.nvim' }, ]]
     --[[   { 'rebelot/kanagawa.nvim' }, ]]
     -- 'morhetz/gruvbox', init = function() vim.g.gruvbox_contrast_dark = 'hard'; vim.cmd.colorscheme 'gruvbox' end,
-    'morhetz/gruvbox',
-    init = function()
-      vim.g.gruvbox_contrast_dark = 'hard'
-      vim.cmd.colorscheme 'gruvbox'
+    -- 'sainnhe/gruvbox-material', lazy = false, config = function() vim.g.gruvbox_material_background = 'hard' vim.g.gruvbox_material_enable_italic = true vim.cmd.colorscheme 'gruvbox-material' end,
+
+    'sainnhe/gruvbox-material',
+    lazy = false,
+    config = function()
+      vim.g.gruvbox_material_background = 'hard'
+      vim.g.gruvbox_material_enable_italic = true
+      vim.cmd.colorscheme 'gruvbox-material'
     end,
 
     priority = 1000,
