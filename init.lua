@@ -1031,6 +1031,23 @@ require('lazy').setup({
     'tpope/vim-fugitive',
   },
 
+  { -- refactorings: extract/inline function/variable
+    'ThePrimeagen/refactoring.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function()
+      require('refactoring').setup()
+
+      -- prompt for a refactor to apply when the remap is triggered
+      vim.keymap.set({ 'n', 'x' }, '<leader>rr', function()
+        require('refactoring').select_refactor()
+      end)
+      -- Note that not all refactor support both normal and visual mode
+    end,
+  },
+
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
